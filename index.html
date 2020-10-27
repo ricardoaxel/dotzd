@@ -7,17 +7,255 @@
     </head>
 
     <body>
-        <header id="menu">
-            <ul>
-                <li><a href="#main">Dotzd</a></li>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#music">Música</a></li>
-                <li><a href="#contact">Contacto</a></li>
+        <header>
+            <nav>
+                <div id="mobileMenu">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        <ul id="menu2">
+                            <li><a href="#main">Dotzd</a></li>
+                            <li><a href="#bio">Bio</a></li>
+                            <li><a href="#music">Música</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#main">Dotzd</a></li>
+                        <li><a href="#bio">Bio</a></li>
+                        <li><a href="#music">Música</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                    <div id="languaje">LEN: <a onClick="changeLanguage('ENG')">ENG</a>|<a onClick="changeLanguage('ESP')">ESP</a></div>
+                    <script>
+                        /*LANGUAGE MANAGING*/
+                        let language="ESP";
+                        function changeLanguage(lan) {
+                            language=lan;
+                            switch(lan){
+                                case "ESP":
+                                    console.log("Se ha cambiado el idioma a español")
+                                    document.getElementById("menu2").innerHTML = "<li><a href='#main'>Dotzd</a></li><li><a href='#bio'>Bio</a></li><li><a href='#music'>Música</a></li><li><a href='#contact'>Contacto</a></li>";
+                                    document.getElementById("menu").innerHTML = "<ul><li><a href='#main'>Dotzd</a></li><li><a href='#bio'>Bio</a></li><li><a href='#music'>Música</a></li><li><a href='#contact'>Contacto</a></li></ul>";
+                                    document.getElementById("firstText").innerHTML = `
+                                    <p>
+                                        One-man band de la ciudad de México con un sonido en la vena del denominado "blackgaze"; con elementos de música ambiental mezclados en armonía con música extrema para dar como resultado un sonido etéreo. 
+                                        </p>
+                                        <p>La música de Dotzd busca llevar al escucha a lugares de ensueño y fantasía a través de guitarras llenas de efectos, distorsión y con una gran cantidad de capaz creando así un inmenso paisaje sonoro.
+                                        </p>
+                                        <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
+                                        </p>
+                                        <br>
+                                        <h3>Canciones recomendadas</h3>
+                                    `;
+                                    document.getElementById("bioTitle").innerHTML = `Biografía`;
+                                    document.getElementById("photoTitle").innerHTML = `Fotos`;
+                                    document.getElementById("bioDescription").innerHTML = `
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis corporis esse ipsum dignissimos. A hic maxime modi dolores vero cupiditate corporis harum numquam, molestiae fugit illum autem consectetur tempora.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque tempora numquam nobis excepturi, nostrum laudantium deserunt facere earum ullam tempore rem blanditiis voluptatum distinctio modi voluptatibus ipsum. Impedit, laboriosam.
+                                    </p>
+                                    <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem placeat quos natus, dolorem autem optio nostrum accusamus tenetur impedit libero dignissimos vero in facilis fugit necessitatibus, ut maiores voluptatibus cupiditate.
+                                    </p>
+                                    <h3>Influencias:</h3>
+                                    <p> lksdaldkl
+                                    </p>`;
+                                    //MUSIC
+                                    document.getElementById("albumDescription").innerHTML = `
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnis optio aut.
+                                    </p>
+                                    <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
+                                    </p> 
+                                    `;
+                                    document.getElementById("recomendedSongs").innerHTML = `Canciones recomendadas`;
+                                    document.getElementById("description-text-musicp2").innerHTML = `
+                                    <div id="title-music-descriptionp2"><h3>Créditos</h3></div>
+                                    <div id="credits">
+                                        Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización    - Ashel<br><br>
+                                        Grabado en el estudio propio "Echo Bravo"
+                                    </div> 
+                                    `;
+                                    document.getElementById("mainContact").innerHTML = `
+                                    <h1>Contacto</h1>
+                                    <p>
+                                        Para entrevistas, presentaciones o más información de la banda puedes contactarme por medio de los siguientes medios.
+                                    </p>
+                                    `;
+                                    document.getElementById("contactFormArea").innerHTML = `
+                                    <div id="contactFormTitle"><h1>Envía un mensaje</h1></div>
+                                    <div id="contactForm">
+                                        <form
+                                            action="https://formspree.io/f/xbjponyb"
+                                            method="POST"
+                                            >
+                                            <label>
+                                                Tú correo:
+                                                <input type="text" name="_replyto">
+                                            </label>
+                                            <label>
+                                                Tú mensaje:
+                                                <textarea name="message"></textarea>
+                                            </label>
+
+                                            <!-- your other form fields go here -->
+
+                                            <button type="submit">Enviar</button>
+                                        </form>
+                                    </div>
+                                    `;
+                                    document.getElementById("socialMediaTexts").innerHTML = `
+                                    <h1 >Redes Sociales:</h1>
+                                    <a href="https://www.facebook.com/Dotzdmx/" class="fa fa-facebook"></a>
+                                    <a href="https://www.instagram.com/dotzd_mx/" class="fa fa-instagram"></a>
+                                    <p>
+                                        Correo: dotzdc@gmail.com (Ashel)
+                                    </p>
+                                    <h1>Escucha a Dotzd en:</h1>
+                                    `;
+                                    
+                                    
+                                    break;
+                                case "ENG":
+                                    console.log("Change to English")
+                                    document.getElementById("menu2").innerHTML = "<li><a href='#main'>Dotzd</a></li><li><a href='#bio'>Bio</a></li><li><a href='#music'>Music</a></li><li><a href='#contact'>Contact</a></li>";
+                                    document.getElementById("menu").innerHTML = "<ul><li><a href='#main'>Dotzd</a></li><li><a href='#bio'>Bio</a></li><li><a href='#music'>Music</a></li><li><a href='#contact'>Contact</a></li></ul>";
+                                    document.getElementById("firstText").innerHTML = `
+                                    <p>
+                                        INGLEEESOne-man band de la ciudad de México con un sonido en la vena del denominado "blackgaze"; con elementos de música ambiental mezclados en armonía con música extrema para dar como resultado un sonido etéreo. 
+                                        </p>
+                                        <p>La música de Dotzd busca llevar al escucha a lugares de ensueño y fantasía a través de guitarras llenas de efectos, distorsión y con una gran cantidad de capaz creando así un inmenso paisaje sonoro.
+                                        </p>
+                                        <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
+                                        </p>
+                                        <br>
+                                        <h3>Recommended Tracks</h3>
+                                    `;
+
+                                    document.getElementById("bioTitle").innerHTML = `Biography`;
+                                    document.getElementById("photoTitle").innerHTML = `Photos`;
+                                    document.getElementById("bioDescription").innerHTML = `
+                                    <p>ENGLISHHHLorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis corporis esse ipsum dignissimos. A hic maxime modi dolores vero cupiditate corporis harum numquam, molestiae fugit illum autem consectetur tempora.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque tempora numquam nobis excepturi, nostrum laudantium deserunt facere earum ullam tempore rem blanditiis voluptatum distinctio modi voluptatibus ipsum. Impedit, laboriosam.
+                                    </p>
+                                    <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem placeat quos natus, dolorem autem optio nostrum accusamus tenetur impedit libero dignissimos vero in facilis fugit necessitatibus, ut maiores voluptatibus cupiditate.
+                                    </p>
+                                    <h3>Influences:</h3>
+                                    <p> lksdaldkl
+                                    </p>`;
+                                    //MUSIC
+                                    document.getElementById("albumDescription").innerHTML = `
+                                    <p>
+                                        ENGLISHHLorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnis optio aut.
+                                    </p>
+                                    <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
+                                    </p> 
+                                    `;
+                                    document.getElementById("recomendedSongs").innerHTML = `Recommended Tracks`;
+                                    document.getElementById("description-text-musicp2").innerHTML = `
+                                    <div id="title-music-descriptionp2"><h3>Credits</h3></div>
+                                    <div id="credits">
+                                        Guitar, bass, synth, drum programming, cover, mix & master    - Ashel<br><br>
+                                        Recorded by the band at their home studio, "Echo Bravo"
+                                    </div> 
+                                    `;
+                                    document.getElementById("mainContact").innerHTML = `
+                                    <h1>Contact</h1>
+                                    <p>
+                                        For interviews, presentations or more information please contact me in any media.
+                                    </p>
+                                    `;
+                                    document.getElementById("contactFormArea").innerHTML = `
+                                    <div id="contactFormTitle"><h1>Send a message</h1></div>
+                                    <div id="contactForm">
+                                        <form
+                                            action="https://formspree.io/f/xbjponyb"
+                                            method="POST"
+                                            >
+                                            <label>
+                                                Your email:
+                                                <input type="text" name="_replyto">
+                                            </label>
+                                            <label>
+                                                Your message:
+                                                <textarea name="message"></textarea>
+                                            </label>
+
+                                            <button type="submit">Send</button>
+                                        </form>
+                                    </div>
+                                    `;
+                                    document.getElementById("socialMediaTexts").innerHTML = `
+                                    <h1 >Social Media:</h1>
+                                    <a href="https://www.facebook.com/Dotzdmx/" class="fa fa-facebook"></a>
+                                    <a href="https://www.instagram.com/dotzd_mx/" class="fa fa-instagram"></a>
+                                    <p>
+                                        Email: dotzdc@gmail.com (Ashel)
+                                    </p>
+                                    <h1>Listen to Dotzd at:</h1>
+                                    `;                   
+                                    break;
+                            }
+
+                            //************We are aware of the album position to change that particular slice*******************
+                            if(language==="ESP"){
+                                switch(albumposition){
+                                    case 0:
+                                        document.getElementById("albumDescription").innerHTML = "<p> Lfsdforemfdsfd ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet cofsdfdsnsectetur adipisicing elit. Velit ifdsfdspsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo lafdsfds canción 'Punta Cometa'</p>";
+                                        document.getElementById("credits").innerHTML = "Gdduitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                        
+
+                                    break;
+                                    case 1:
+
+                                        document.getElementById("albumDescription").innerHTML = "<p> Lfsdforem ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                        document.getElementById("credits").innerHTML = "Gffffuitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";    
+
+                                    break;
+                                    case 2:
+                                        document.getElementById("albumDescription").innerHTML = "<p> dasdsadsadsdsait ipsumfdsf odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                        document.getElementById("credits").innerHTML = "Gui444tarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                    break;
+                                }
+                            }
+                            if(language==="ENG"){
+                                switch(albumposition){
+                                    case 0:
+                                        document.getElementById("albumDescription").innerHTML = "<p> ENGGGLfsdforemfdsfd ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet cofsdfdsnsectetur adipisicing elit. Velit ifdsfdspsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo lafdsfds canción 'Punta Cometa'</p>";
+                                        document.getElementById("credits").innerHTML = "ENGGtarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                        
+
+                                    break;
+                                    case 1:
+
+                                        document.getElementById("albumDescription").innerHTML = "<p> ENGGGLfsdforem ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                        document.getElementById("credits").innerHTML = "ENGGGGffffuitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";    
+
+                                    break;
+                                    case 2:
+                                        document.getElementById("albumDescription").innerHTML = "<p> ENGGGdasdsadsadsdsait ipsumfdsf odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                        document.getElementById("credits").innerHTML = "ENGGGGui444tarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                    break;
+                                }
+                            }
+                        }
+                    </script>
                 
-            <div id="languaje">LEN: <a href="#">ENG</a>|<a href="#">ESP</a></div>
-            </ul>
+            </nav>
         </header>
-        
+
 
         <div id="site-wrapper">
             <section id="main" class="fullHeight">
@@ -25,15 +263,17 @@
                     <div class="main-text separation">
                         <div id="title"><h1>Dotzd</h1></div>
                         
-                        <p>
-                            One-man band de la ciudad de México con un sonido en la vena del denominado "blackgaze"; con elementos de música ambiental mezclados en armonía con música extrema para dar como resultado un sonido etéreo. 
-                        </p>
-                        <p>La música de Dotzd busca llevar al escucha a lugares de ensueño y fantasía a través de guitarras llenas de efectos, distorsión y con una gran cantidad de capaz creando así un inmenso paisaje sonoro.
-                        </p>
-                        <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
-                        </p>
-                        <br>
-                        <h3>Canciones recomendadas</h3>
+                        <div id="firstText">
+                            <p>
+                                One-man band de la ciudad de México con un sonido en la vena del denominado "blackgaze"; con elementos de música ambiental mezclados en armonía con música extrema para dar como resultado un sonido etéreo. 
+                            </p>
+                            <p>La música de Dotzd busca llevar al escucha a lugares de ensueño y fantasía a través de guitarras llenas de efectos, distorsión y con una gran cantidad de capaz creando así un inmenso paisaje sonoro.
+                            </p>
+                            <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
+                            </p>
+                            <br>
+                            <h3>Canciones recomendadas</h3>
+                        </div>
                         <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
                         <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=22841879/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/so-ar">Soñar by Dotzd</a></iframe>
                     </div>
@@ -49,7 +289,13 @@
                         <img class="mySlides" src="Images/shoeAzul.jpg" style="width:100%">
                         <img class="mySlides" src="Images/BlackNWhite.jpg" style="width:100%">
                         <img class="mySlides" src="Images/Alone2.jpg" style="width:100%">
+                        
+                    </div>
+                    <div id="textsec2" class="main-text separation">
+                        <h1 id="bioTitle">Biografía</h1>
+                        
                         <div id="arrows">
+                            <h3 id="photoTitle">Fotos:</h3>
                             <div class="arrow" id="arrowLeft" onClick="plusDivs(-1)">&#10094;</div>
                             <div class="arrow" id="arrowRight" onClick="plusDivs(1)">&#10095;</div>
                         </div>
@@ -82,19 +328,18 @@
                               dots[slideIndex-1].className += " w3-white";
                           }
                         </script>
-                    </div>
-                    <div id="textsec2" class="main-text separation">
-                        <h1>Biografía</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis corporis esse ipsum dignissimos. A hic maxime modi dolores vero cupiditate corporis harum numquam, molestiae fugit illum autem consectetur tempora.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque tempora numquam nobis excepturi, nostrum laudantium deserunt facere earum ullam tempore rem blanditiis voluptatum distinctio modi voluptatibus ipsum. Impedit, laboriosam.
-                        </p>
-                        <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem placeat quos natus, dolorem autem optio nostrum accusamus tenetur impedit libero dignissimos vero in facilis fugit necessitatibus, ut maiores voluptatibus cupiditate.
-                        </p>
-                        <h3>Influencias:</h3>
-                        <p> lksdaldkl
-                        </p>
+                        <div id="bioDescription">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt blanditiis corporis esse ipsum dignissimos. A hic maxime modi dolores vero cupiditate corporis harum numquam, molestiae fugit illum autem consectetur tempora.
+                            </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque tempora numquam nobis excepturi, nostrum laudantium deserunt facere earum ullam tempore rem blanditiis voluptatum distinctio modi voluptatibus ipsum. Impedit, laboriosam.
+                            </p>
+                            <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem placeat quos natus, dolorem autem optio nostrum accusamus tenetur impedit libero dignissimos vero in facilis fugit necessitatibus, ut maiores voluptatibus cupiditate.
+                            </p>
+                            <h3>Influencias:</h3>
+                            <p> lksdaldkl
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -118,7 +363,7 @@
                             </p>   
                         </div>
                         <br>
-                        <h3>Canciones recomendadas</h3>
+                        <h3 id="recomendedSongs">Canciones recomendadas</h3>
                         <div id="featuredTracks">
                             <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
                             <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
@@ -151,8 +396,6 @@
 
                 </div>
                 
-
-
                 <script>
                     let albumposition= 0;
                     function changeAlbum(direction) {
@@ -165,41 +408,73 @@
                         if(albumposition>2){
                             albumposition=0;
                         }
+
                         switch(albumposition){
-                            case 0:
-                            document.getElementById("music").style.backgroundImage = "url('Images/Covers/Fantasia.jpg')";
-                                document.getElementById("albumtitletext").innerHTML = "Fantasia";
-                                document.getElementById("albumDescription").innerHTML = "<p> Lfsdforemfdsfd ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet cofsdfdsnsectetur adipisicing elit. Velit ifdsfdspsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo lafdsfds canción 'Punta Cometa'</p>";
-                                document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
-                                document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
-                                document.getElementById("albumtracks").innerHTML = "<li>Nonawa</li><li>Wonder</li><li>Sune</li><li>Catnip</li><li>Copo</li><li>Palpitar</li>";
-                                document.getElementById("credits").innerHTML = "Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
-                                
+                                case 0:
+                                    document.getElementById("music").style.backgroundImage = "url('Images/Covers/Fantasia.jpg')";
+                                    document.getElementById("albumtitletext").innerHTML = "Fantasia";
+                                    document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
+                                    document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
+                                    document.getElementById("albumtracks").innerHTML = "<li>Nonawa</li><li>Wonder</li><li>Sune</li><li>Catnip</li><li>Copo</li><li>Palpitar</li>";
 
-                            break;
-                            case 1:
-                                document.getElementById("music").style.backgroundImage = "url('Images/Covers/Sonar.jpg')";
-                                document.getElementById("albumtitletext").innerHTML = "Soñar";
-                                document.getElementById("albumDescription").innerHTML = "<p> Lfsdforem ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
-                                document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=22841879/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=3649371717/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
-                                document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=large/bgcol=333333/linkcol=ffffff/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
-                                document.getElementById("albumtracks").innerHTML = "<li>...</li><li>Soñar</li><li>Sinestesia</li><li>Interludio</li><li>Lala</li> <li>Frost</li>";
-                                document.getElementById("credits").innerHTML = "Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";    
+                                break;
+                                case 1:
+                                    document.getElementById("music").style.backgroundImage = "url('Images/Covers/Sonar.jpg')";
+                                    document.getElementById("albumtitletext").innerHTML = "Soñar";
+                                    document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=22841879/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=3649371717/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
+                                    document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=large/bgcol=333333/linkcol=ffffff/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
+                                    document.getElementById("albumtracks").innerHTML = "<li>...</li><li>Soñar</li><li>Sinestesia</li><li>Interludio</li><li>Lala</li> <li>Frost</li>";
+                                break;
+                                case 2:
+                                    document.getElementById("music").style.backgroundImage = "url('Images/Covers/Reveries.jpg')";
+                                    document.getElementById("albumtitletext").innerHTML = "Reveries";
+                                    document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=small/bgcol=333333/linkcol=ffffff/track=657903695/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
+                                    document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
+                                    document.getElementById("albumtracks").innerHTML = "<li>Volar</li><li>Dive</li><li>Narwhals</li><li>Routinary Nights</li><li>Shine</li> <li>Finale - Ashes</li>";
+                                break;
+                            }
+                        //************We are aware of the site language to change that particular slice in the selected languaje*******************
+                        if(language==="ESP"){
+                            switch(albumposition){
+                                case 0:
+                                    document.getElementById("albumDescription").innerHTML = "<p> Lfsdforemfdsfd ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet cofsdfdsnsectetur adipisicing elit. Velit ifdsfdspsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo lafdsfds canción 'Punta Cometa'</p>";
+                                    document.getElementById("credits").innerHTML = "Gdduitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                    
 
-                            break;
-                            case 2:
-                            document.getElementById("music").style.backgroundImage = "url('Images/Covers/Reveries.jpg')";
-                                document.getElementById("albumtitletext").innerHTML = "Reveries";
-                                document.getElementById("albumDescription").innerHTML = "<p> dasdsadsadsdsait ipsumfdsf odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
-                                document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=small/bgcol=333333/linkcol=ffffff/track=657903695/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
-                                document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
-                                document.getElementById("albumtracks").innerHTML = "<li>Volar</li><li>Dive</li><li>Narwhals</li><li>Routinary Nights</li><li>Shine</li> <li>Finale - Ashes</li>";
-                                document.getElementById("credits").innerHTML = "Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
-                            break;
+                                break;
+                                case 1:
 
+                                    document.getElementById("albumDescription").innerHTML = "<p> Lfsdforem ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                    document.getElementById("credits").innerHTML = "Gffffuitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";    
+
+                                break;
+                                case 2:
+                                    document.getElementById("albumDescription").innerHTML = "<p> dasdsadsadsdsait ipsumfdsf odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                    document.getElementById("credits").innerHTML = "Gui444tarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                break;
+                            }
                         }
-                        console.log(albumposition)
-                        
+                        if(language==="ENG"){
+                            switch(albumposition){
+                                case 0:
+                                    document.getElementById("albumDescription").innerHTML = "<p> ENGGGLfsdforemfdsfd ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet cofsdfdsnsectetur adipisicing elit. Velit ifdsfdspsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo lafdsfds canción 'Punta Cometa'</p>";
+                                    document.getElementById("credits").innerHTML = "ENGGtarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                    
+
+                                break;
+                                case 1:
+
+                                    document.getElementById("albumDescription").innerHTML = "<p> ENGGGLfsdforem ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                    document.getElementById("credits").innerHTML = "ENGGGGffffuitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";    
+
+                                break;
+                                case 2:
+                                    document.getElementById("albumDescription").innerHTML = "<p> ENGGGdasdsadsadsdsait ipsumfdsf odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                    document.getElementById("credits").innerHTML = "ENGGGGui444tarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                break;
+                            }
+                        }
+                            
                     }
                 </script>
             </section>
@@ -237,11 +512,23 @@
                         </div>
                     </div>
                     <div id="socialMedia">
-                        <h1>Redes Sociales:</h1>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-instagram"></a>
+                        <div id="socialMediaTexts">
+                            <h1 >Redes Sociales:</h1>
+                            <a href="https://www.facebook.com/Dotzdmx/" class="fa fa-facebook"></a>
+                            <a href="https://www.instagram.com/dotzd_mx/" class="fa fa-instagram"></a>
+                            <p>
+                                Correo: dotzdc@gmail.com (Ashel)
+                            </p>
+                            <h1>Escucha a Dotzd en:</h1>
+                        </div>
+                        <a href="https://open.spotify.com/artist/79GsZllo3AdguIaHUh1u3l"><img class="streamingServices" src="Images/Media/Spotify.png"/></a>
+                        <a href="https://music.apple.com/us/artist/dotzd/1108541884"><img class="streamingServices" src="Images/Media/appleMusic.png"/></a>
+                        <a href="https://music.youtube.com/browse/UCAnzGtjOQmKWU2KJDx6IGJg"><img class="streamingServices" src="Images/Media/GoogleMusic.png"/><br></a>
+                        <a href="https://dotzd.bandcamp.com/"><img class="streamingServices" src="Images/Media/Bandcamp.png"/></a>
+                        <a href="https://www.deezer.com/mx/artist/10268706"><img class="streamingServices" src="Images/Media/Deezer.png"/></a>
+                        <a href="https://www.tidal.com/browse/artist/7785830"><img class="streamingServices" src="Images/Media/Tidal.png"/></a>
                         <p>
-                            Correo: dotzdc@gmail.com (Ashel)
+                            
                         </p>
                     </div>
                 </div>

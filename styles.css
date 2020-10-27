@@ -17,21 +17,39 @@ html, body {
 img {max-width:100%;}
 
 
-/* MENU */
-#menu{
-    font-size: 1.5rem;
-    font-weight:600;
-    position: fixed;
-    width: 100%;
-    height: auto;
-    background-color: rgba(5, 5, 5, 0.301);
-    z-index: 100000;
+
+#languaje{
+    color: rgb(206, 199, 224);
+    font-size: .9rem;
+    font-weight:500;
+    position: absolute;
+    right:  6rem;
+    top: 1.7rem;   
+    z-index:10000000000;
 }
+#languaje a{
+    color: rgb(206, 199, 224);
+    z-index:10000000000;
+}
+
+
+
+/* MENU */
+
+#menu{
+    display:inline;
+    transition: 1s;
+    top: 10rem;  
+    
+}
+
 #menu ul{
     margin: 1rem 0rem .8rem 2rem;
-    padding: 0;
+    padding: -2rem;
+    
 }
 #menu ul li{
+    font-size: 1.6rem;
     display:inline; 
     padding: .5rem;
 }
@@ -43,22 +61,147 @@ img {max-width:100%;}
     transition: .3s; 
 }
 #menu ul li a:hover{
-    color: #1a1e30;
-    border-bottom:1px solid #1a1e30; ;
+    color: #ffffff;
+    border-bottom:1px solid #ffffff; ;
     font-size: 1.7rem;
 }
-#languaje{
-    color: rgb(206, 199, 224);
-    font-size: .8rem;
+
+/*MOBILE MENU */
+
+
+
+#mobileMenu{
+    transition: 1s;
+    display: none;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  font-size: 1.5rem;
     font-weight:500;
-    position: absolute;
-    right:  2rem;
-    top: 1.7rem;   
-    padding-right:2rem;  
+  z-index: 100000000000;
+  width: 100%;
+    height: 3.7rem;
+    background-color: rgba(5, 5, 5, 0.301)
 }
-#languaje a{
-    color: rgb(206, 199, 224);
+
+/*All of these are for the span animation and menu desplegation */
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1.6rem;
+  left: 1.5rem;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
 }
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+#menuToggle span
+{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/* END OF SPAN CLASSES*/
+
+#menu2
+{ 
+  position: absolute;
+  width: 180px;
+  height: 100vh;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #f5f6faf1;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu2 li
+{
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+#menu2 a {
+    text-decoration: none;
+    color: #1E1E23;
+    opacity:1;
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: 200ms;
+  }
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/*Change of menu*/
+@media (max-width:650px){
+    #menu{
+        display: none;
+    }
+    #mobileMenu{
+        display: block;
+    }
+    #languaje{
+        right:  2rem;
+    }
+}
+
+
+
+
 
 
 
@@ -79,10 +222,8 @@ img {max-width:100%;}
     background-size: auto 100%;
 }
 
-
-
 .separation{
-    padding-top:10%;
+    padding-top:8rem;
 }
 .main-text{
     font-size: 1rem;
@@ -158,9 +299,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 #arrows{
-    margin-left: 44%;
-    cursor: default
-    
+    position: relative;
+    right: 0%;
+    top: -4rem;
+    cursor: default 
+}
+
+#arrows h3{
+    display:inline;
 }
 .arrow{
     font-size: 4rem;
@@ -187,7 +333,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
 
     #textsec2{
-        margin-top: -10rem;
+        margin-top: -5rem;
     }
 
     .arrow{
@@ -209,7 +355,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
 
     #textsec2{
-        margin-top: -7rem;
+        margin-top: -5rem;
     }
 }
 /**/
@@ -577,6 +723,16 @@ button:hover {
     color: white;
 }
 
+.streamingServices{
+    height: 25px;
+    padding: 10px;
+}
+
+.streamingServices:hover {
+    background-color: rgba(255, 255, 255, 0.062);
+    opacity: 0.9;
+}
+
 @media (max-width:1306px){
     #contactFormArea{
         padding-left: 1rem;
@@ -596,5 +752,17 @@ button:hover {
         font-size: 1.2rem;
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+
+
+@media (max-width:650px){
+
+    #mainContact h1{
+        margin-top:0px;
+        color: #ebeef1;
+        font-size:2rem;
+        font-weight: 900;
+        padding-top: 5rem;
     }
 }
