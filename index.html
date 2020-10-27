@@ -44,9 +44,43 @@
             
             <section id="bio" class="fullHeight">
                 <div id="flexcontainer2">
-                    <div id="bioImages" class="separation">
-                     
-                        <img src="Images/shoeAzul.jpg">
+                    <div class="bioImages separation">
+                        <img class="mySlides" src="Images/shoeAzul.jpg" style="width:100%">
+                        <img class="mySlides" src="Images/BlackNWhite.jpg" style="width:100%">
+                        <img class="mySlides" src="Images/Alone2.jpg" style="width:100%">
+                        <div id="arrows">
+                            <div class="arrow" id="arrowLeft" onClick="plusDivs(-1)">&#10094;</div>
+                            <div class="arrow" id="arrowRight" onClick="plusDivs(1)">&#10095;</div>
+                        </div>
+
+                        <script>
+                        var slideIndex = 1;
+                          showDivs(slideIndex);
+                          
+                          function plusDivs(n) {
+                              showDivs(slideIndex += n);
+                          }
+                          
+                          function currentDiv(n) {
+                              showDivs(slideIndex = n);
+                          }
+                          
+                          function showDivs(n) {
+                              var i;
+                              var x = document.getElementsByClassName("mySlides");
+                              var dots = document.getElementsByClassName("demo");
+                              if (n > x.length) {slideIndex = 1}
+                              if (n < 1) {slideIndex = x.length}
+                              for (i = 0; i < x.length; i++) {
+                              x[i].style.display = "none";  
+                              }
+                              for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" w3-white", "");
+                              }
+                              x[slideIndex-1].style.display = "block";  
+                              dots[slideIndex-1].className += " w3-white";
+                          }
+                        </script>
                     </div>
                     <div id="textsec2" class="main-text separation">
                         <h1>Biografía</h1>
@@ -65,7 +99,108 @@
             </section>
 
             <section id="music" class="fullHeight">
-                asda
+                <div id="musicArrows">
+                    <div id="fullArrLeft" class="arrowMContainer"><div class="arrowM" id="arrowLeftM" onClick="changeAlbum(-1)">&#10094;</div></div>
+                    <div id="fullArrRight" class="arrowMContainer"><div class="arrowM" id="arrowRightM" onClick="changeAlbum(+1)">&#10095;</div></div>
+                </div>
+                
+                <div id="flexcontainermusic">
+                    <div id="main-text-music" class="separation">
+                        <div id="albumtitle"><h1 id="albumtitletext">Fantasia</h1></div>
+                        <div id="albumDescription">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!
+                            </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnis optio aut.
+                            </p>
+                            <p>"Tempo" será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción "Punta Cometa"
+                            </p>   
+                        </div>
+                        <br>
+                        <h3>Canciones recomendadas</h3>
+                        <div id="featuredTracks">
+                            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
+                            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
+                        </div>
+                    </div>
+                    <div id="bcPlayer"class="separation">
+                        <iframe id="bandcampProperties" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=large/bgcol=333333/linkcol=ffffff/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
+                    </div>
+                    <div id="description" class="separation">
+                        <div id="description-text-music" class="separation">
+                            <div id="title-music-description"><h2>Tracklist</h2></div>
+                            <ol id="albumtracks">
+                                <li>Nonawa</li>
+                                <li>Wonder</li>
+                                <li>Sune</li>
+                                <li>Catnip</li>
+                                <li>Copo</li>
+                                <li>Palpitar</li>
+                            </ol>
+                        </div>
+                        <div id="description-text-musicp2" class="separation">
+                            <div id="title-music-descriptionp2"><h3>Créditos</h3></div>
+                            <div id="credits">
+                                Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización    - Ashel<br><br>
+                                Grabado en el estudio propio "Echo Bravo"
+                            </div>                          
+                            
+                        </div>
+                    </div>
+
+                </div>
+                
+
+
+                <script>
+                    let albumposition= 0;
+                    function changeAlbum(direction) {
+                        albumposition=albumposition+direction;
+                        //If the album position gets to the first element
+                        if(albumposition<0){
+                            albumposition=2;
+                        }
+                        //If the album position gets to the last element
+                        if(albumposition>2){
+                            albumposition=0;
+                        }
+                        switch(albumposition){
+                            case 0:
+                            document.getElementById("music").style.backgroundImage = "url('Images/Covers/Fantasia.jpg')";
+                                document.getElementById("albumtitletext").innerHTML = "Fantasia";
+                                document.getElementById("albumDescription").innerHTML = "<p> Lfsdforemfdsfd ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet cofsdfdsnsectetur adipisicing elit. Velit ifdsfdspsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo lafdsfds canción 'Punta Cometa'</p>";
+                                document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
+                                document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
+                                document.getElementById("albumtracks").innerHTML = "<li>Nonawa</li><li>Wonder</li><li>Sune</li><li>Catnip</li><li>Copo</li><li>Palpitar</li>";
+                                document.getElementById("credits").innerHTML = "Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                                
+
+                            break;
+                            case 1:
+                                document.getElementById("music").style.backgroundImage = "url('Images/Covers/Sonar.jpg')";
+                                document.getElementById("albumtitletext").innerHTML = "Soñar";
+                                document.getElementById("albumDescription").innerHTML = "<p> Lfsdforem ipsdfsdfdsfum dolor sit amet consectetur adipisicing elit. Nisi, aliquid. Placeat, neque id alias veritatis sed fuga nobis accusantium eum. Voluptatem quas dolorum praesentium beatae nemo culpa veniam excepturi corporis!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsum odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=22841879/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=3649371717/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
+                                document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=large/bgcol=333333/linkcol=ffffff/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
+                                document.getElementById("albumtracks").innerHTML = "<li>...</li><li>Soñar</li><li>Sinestesia</li><li>Interludio</li><li>Lala</li> <li>Frost</li>";
+                                document.getElementById("credits").innerHTML = "Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";    
+
+                            break;
+                            case 2:
+                            document.getElementById("music").style.backgroundImage = "url('Images/Covers/Reveries.jpg')";
+                                document.getElementById("albumtitletext").innerHTML = "Reveries";
+                                document.getElementById("albumDescription").innerHTML = "<p> dasdsadsadsdsait ipsumfdsf odit, beatae deleniti magni nisi fuga, suscipit natus, accusamus voluptatum aliquid rerum? Minus neque a cumque, rem omnisfsdf optio aut.</p><p>'Tempo' será el primer LP con próximo lanzamiento el Noviembre del 2020, teniendo como sencillo la canción 'Punta Cometa'</p>";
+                                document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=small/bgcol=333333/linkcol=ffffff/track=657903695/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
+                                document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
+                                document.getElementById("albumtracks").innerHTML = "<li>Volar</li><li>Dive</li><li>Narwhals</li><li>Routinary Nights</li><li>Shine</li> <li>Finale - Ashes</li>";
+                                document.getElementById("credits").innerHTML = "Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización Ashel<br><br>Grabado en el estudio propio 'Echo Bravo'";  
+                            break;
+
+                        }
+                        console.log(albumposition)
+                        
+                    }
+                </script>
             </section>
 
             <section id="contact" class="fullHeight">

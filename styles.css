@@ -25,7 +25,7 @@ img {max-width:100%;}
     width: 100%;
     height: auto;
     background-color: rgba(5, 5, 5, 0.301);
-    z-index: 1000;
+    z-index: 100000;
 }
 #menu ul{
     margin: 1rem 0rem .8rem 2rem;
@@ -43,8 +43,8 @@ img {max-width:100%;}
     transition: .3s; 
 }
 #menu ul li a:hover{
-    color: #5b5274;
-    border-bottom:1px solid #5b5274 ;
+    color: #ca0076;
+    border-bottom:1px solid #ca0076; ;
     font-size: 1.7rem;
 }
 #languaje{
@@ -78,8 +78,11 @@ img {max-width:100%;}
     background: url("Images/Covers/COVER.png");
     background-size: auto 100%;
 }
+
+
+
 .separation{
-    padding-top:6rem;
+    padding-top:10%;
 }
 .main-text{
     font-size: 1rem;
@@ -98,9 +101,13 @@ img {max-width:100%;}
 #dotzdMains{
     width: 50%;
     height: auto;
+    transition: 1s;
+}
+#dotzdMains:hover{
+    width: 53%;
 }
 
-@media (max-width:1246px){
+@media (max-width:1330px){
 
     #main{
         height: 100%;
@@ -122,14 +129,15 @@ img {max-width:100%;}
 
 
 
-
-
 /* BIO */
+
+/*IMAGES*/
 #bio{
-    background-color: #0b0b0c;
+    background-color: #0f0f0f;
 }
 
 #flexcontainer2{
+
     color: rgb(230, 230, 220); 
     display: flex;
     flex-wrap: wrap;
@@ -137,12 +145,73 @@ img {max-width:100%;}
     flex-direction: row;
 }
 
-#bioImages{
-    width: 47%;
+.bioImages{
+    padding-top: 6rem;
+    width: 50%;
     height: auto;
+    transition: 1s;
 }
 
-#textsec2{
+.bioImages:hover{
+    width: 53%;
+}
+
+#arrows{
+    margin-left: 44%;
+    
+}
+.arrow{
+    font-size: 4rem;
+    font-weight:300;
+    display: inline;
+}
+
+.arrow:hover{
+    color: #31314b;
+}
+#arrowLeft{
+    position: relative;
+}
+
+@media (max-width:1386px){
+    #bio{
+        height: 100%
+    }
+
+    .bioImages{
+        padding-top: 5rem;
+        width: 60%;
+        height: auto;
+    }
+
+    #textsec2{
+        margin-top: -10rem;
+    }
+
+    .arrow{
+        font-size: 3rem;
+        font-weight:300;
+        display: inline;
+    }
+}
+
+@media (max-width:700px){
+    #bio{
+        height: 100%
+    }
+
+    .bioImages{
+        padding-top: 5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    #textsec2{
+        margin-top: -7rem;
+    }
+}
+/**/
+#textsec2{  
     padding-top: 6rem;
 }
 #textsec2 h1{
@@ -152,10 +221,217 @@ img {max-width:100%;}
 
 
 
+
+
 /* MUSIC */
+
 #music{
-    background-color: brown;
+    background-image: url("Images/Covers/Fantasia.jpg");
+    transition: 1s;
 }
+#flexcontainermusic{
+    display: flex;
+    padding-bottom: 15rem;
+    margin-top: 4rem;
+    transition: 1s;
+    height: 75%;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    background-size: auto 100%;
+}
+#albumtitle h1{
+    font-size: 4rem;
+    font-weight:600;
+    margin-bottom: 1rem;
+    margin-top: 0rem; 
+}
+#main-text-music{
+    padding-top: 5rem;
+    background-color: rgba(240, 255, 255, 0.856);
+    font-size: 1rem;
+    width: 35em;
+    text-align: justify;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+#bcPlayer{
+    padding-top: 5rem;
+    background-color: rgba(7, 4, 14, 0.753);
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    z-index: 10000;
+}
+#description{
+    padding-top: 4rem;
+    background-color: rgba(7, 4, 14, 0.753);
+    width: 20em;
+    height: auto;
+    padding-left: 2rem;
+}
+#title-music-description{
+    text-align: right;
+}
+#description-text-music{
+    color: rgb(255, 255, 255);
+    opacity: .8;
+    font-size: 1rem;
+    text-align: justify;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: right;
+    list-style-position: inside;    
+}
+#description-text-musicp2{
+    color: rgb(255, 255, 255);
+    opacity: .8;
+    font-size: 1rem;
+    text-align: justify;
+    padding-right: 2rem;
+    padding-left: 0rem;  
+}
+#arrowsMusic{
+    font-size: 20rem;
+}
+.arrowMContainer{
+    transition: .3s;
+    margin-left: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+}
+.arrowMContainer:hover{
+    background-color: rgba(255, 255, 255, 0.884);
+}
+.arrowM{
+    position: relative;
+    bottom: 0.25rem;
+    color: cornsilk;
+    font-size: 4rem;
+    font-weight:00;
+    text-align: center;
+    transition: 1s;
+}
+.arrowM:hover{
+    color: rgb(0, 0, 0);
+}
+#arrowLeftM{
+    right: 9px;  
+}
+#arrowRightM{
+    left: 4px;
+}
+
+#musicArrows{
+ position: sticky;
+ top:50%;
+
+}
+#fullArrLeft{
+    margin-left: 5%;
+}
+#fullArrRight{
+    margin-top:-5em;
+    margin-left: 93%;
+}
+
+#bandcampProperties{
+    z-index: 10000;
+    border: 0; 
+    width: 350px; 
+    height: 621px;
+}
+@media (max-width:1600px){
+
+    #fullArrRight{
+        margin-top:-5em;
+        margin-left: 85%;
+    }
+
+    #music{
+        height: 100%
+    }
+    #description{
+        width: 100%;
+        height: auto;
+    }
+    #description-text-music{
+        margin-top: -13rem;
+    }
+    #description-text-musicp2{
+        margin-top: -15rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media(max-width:1375px){
+    #fullArrLeft{
+        margin-left: 5%;
+    }
+    #fullArrRight{
+        margin-top:-5em;
+        margin-left: 85%;
+    }
+    #description{
+        padding-top: 4rem;
+        background-color: rgba(7, 4, 14, 0.753);
+        width: 20em;
+        height: auto;
+        padding-left: 2rem;
+    }
+    #description-text-music{
+        margin-top: -5rem;
+    }
+    #description-text-musicp2{
+        margin-top: 0rem;
+        padding-bottom: 1rem;
+    }
+     
+}
+
+
+
+@media (max-width:763px){
+    #fullArrLeft{
+        margin-left: 5%;
+    }
+    #fullArrRight{
+        margin-top:-5em;
+        margin-left: 75%;
+    }
+    #bcPlayer{
+    padding-top: 5rem;
+    background-color: rgba(7, 4, 14, 0.753);
+    width: auto;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    }
+}
+
+@media (max-width:350px){
+    #fullArrLeft{
+        margin-left: 1%;
+    }
+    #fullArrRight{
+        margin-top:-5em;
+        margin-left: 65%;
+    }
+
+    #bandcampProperties{
+        z-index: 10000;
+        border: 0; 
+        width: 230px; 
+        height: 461px;
+    }
+}
+
+
+
+
+
 
 /* CONTACT */
 #contact{
