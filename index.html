@@ -14,10 +14,21 @@
         <script>
             window.onload = function() {
                 //changeLanguage("ENG");
+                updateVisitCount();
                 setTimeout(function(){ 
                     document.getElementById('popUp').style.display = 'block'; 
                 }, 10000);
             };
+
+
+            function updateVisitCount(){
+                fetch("https://api.countapi.xyz/update/dotzd.xyz/dotzdCounter/?amount=1")
+                .then(res => res.json())
+                .then(res => {
+                    console.log("asdas",res.value);
+                    document.getElementById("visitorsCount").innerHTML = res.value;
+                });
+            }
         </script>
     </head>
 
@@ -778,7 +789,7 @@
                         
                     </div>
                 </div>
-                <div id="webCredits">Site made by @Ashel <a href="https://github.com/ricardoaxel" target="_blank">(https://github.com/ricardoaxel)</a></div>
+                <div id="webCredits">Site made by @Ashel <a href="https://github.com/ricardoaxel" target="_blank">(https://github.com/ricardoaxel)</a> <div id="visitors">Visitors count:<div id="visitorsCount"></div></div></div>
                 
             </section>
         </div>
