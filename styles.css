@@ -26,10 +26,14 @@ img {max-width:100%;}
     right:  6rem;
     top: 1.7rem;   
     z-index:10000000000;
+    cursor: default;
 }
 #languaje a{
     color: rgb(206, 199, 224);
     z-index:10000000000;
+}
+#languaje a:hover{
+    color: rgb(232, 230, 235);
 }
 
 
@@ -229,6 +233,17 @@ ul {
 .separation{
     padding-top:8rem;
 }
+
+#firstText a{
+    text-decoration: none;
+    color: rgb(155, 128, 250);
+    font-weight: 600;
+    transition:.3s
+}
+#firstText a:hover{
+    color: rgb(191, 175, 248);
+    font-weight: 600;
+}
 .main-text{
     font-size: 1rem;
     font-weight:0;
@@ -289,6 +304,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row;
+    font-size: .5rem;
+}
+
+#bioDescription{
+    margin-top: -4rem;
+    font-size: .8rem;
 }
 
 .bioImages{
@@ -759,7 +780,17 @@ button:hover {
     }
 }
 
+#webCredits{
+    padding:.5rem;
+    font-size: .8rem;
+    color: rgba(212, 223, 243, 0.856);
+    background-color: rgba(24, 25, 36, 0.925);
+}
 
+#webCredits a{
+    color: rgba(233, 237, 243, 0.884);
+    text-decoration: none;
+}
 @media (max-width:650px){
 
     #mainContact h1{
@@ -770,6 +801,8 @@ button:hover {
         padding-top: 5rem;
     }
 }
+
+
 
 
 /* POP UP CLASSES */
