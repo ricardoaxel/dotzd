@@ -22,7 +22,10 @@
 
 
             function updateVisitCount(){
-                fetch("https://api.countapi.xyz/update/dotzd.xyz/dotzdCounter/?amount=1")
+                //Dev Count API
+                //fetch("https://api.countapi.xyz/update/dotzd.xyz/dotzdCounter/?amount=1")
+                //Production unt API
+                fetch("https://api.countapi.xyz/update/dotzdProduction/counter/?amount=1")
                 .then(res => res.json())
                 .then(res => {
                     console.log("asdas",res.value);
