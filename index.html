@@ -4,6 +4,14 @@
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            window.onload = function() {
+                changeLanguage("ENG");
+                setTimeout(function(){ 
+                    document.getElementById('popUp').style.display = 'block'; 
+                }, 10000);
+            };
+        </script>
     </head>
 
     <body>
@@ -122,6 +130,13 @@
                                     </p>
                                     <h1>Escucha a Dotzd en:</h1>
                                     `;
+                                    document.getElementById("popUpTitles").innerHTML = `
+                                    Nuevo sencillo <h2>"Punta Cometa"</h2>
+                                    `;
+                                    document.getElementById("popUpDescription").innerHTML = `
+                                    Disponible a partir del 13 de Noviembre del 2020 en todas las plataformas
+                                    `;
+
                                     
                                     
                                     break;
@@ -206,7 +221,13 @@
                                         Email: dotzdc@gmail.com (Ashel)
                                     </p>
                                     <h1>Listen to Dotzd at:</h1>
-                                    `;                   
+                                    `;
+                                    document.getElementById("popUpTitles").innerHTML = `
+                                    New Single <h2>"Punta Cometa"</h2>
+                                    `;
+                                    document.getElementById("popUpDescription").innerHTML = `
+                                    Available on November 13 on all the streaming platforms
+                                    `;              
                                     break;
                             }
 
@@ -374,7 +395,7 @@
                         <iframe id="bandcampProperties" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=large/bgcol=333333/linkcol=ffffff/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
                     </div>
                     <div id="description" class="separation">
-                        <div id="description-text-music" class="separation">
+                        <div id="description-text-music">
                             <div id="title-music-description"><h2>Tracklist</h2></div>
                             <ol id="albumtracks">
                                 <li>Nonawa</li>
@@ -400,6 +421,7 @@
                 <script>
                     let albumposition= 0;
                     function changeAlbum(direction) {
+                     
                         albumposition=albumposition+direction;
                         //If the album position gets to the first element
                         if(albumposition<0){
@@ -534,6 +556,27 @@
                     </div>
                 </div>
             </section>
-        </div> 
+        </div>
+        <div id="popUp">
+            <div id="popContent">
+                <div id="popUpTitles">
+                    Nuevo sencillo <h2>"Punta Cometa"</h2>
+                </div>
+                <img id="popUpImage" src="Images/Covers/Punta Cometa.jpg"><br>
+                <div id="popUpDescription">Disponible a partir del 13 de Noviembre del 2020 en todas las plataformas</div>
+                <br>
+                <a href="https://open.spotify.com/artist/79GsZllo3AdguIaHUh1u3l"><img class="streamingServicesPU" src="Images/Media/Spotify.png"/></a>
+                <a href="https://music.apple.com/us/artist/dotzd/1108541884"><img class="streamingServicesPU" src="Images/Media/appleMusic.png"/></a>
+                <a href="https://music.youtube.com/browse/UCAnzGtjOQmKWU2KJDx6IGJg"><img class="streamingServicesPU" src="Images/Media/GoogleMusic.png"/></a>
+                <a href="https://dotzd.bandcamp.com/"><img class="streamingServicesPU" src="Images/Media/Bandcamp.png"/></a>
+                <a href="https://www.deezer.com/mx/artist/10268706"><img class="streamingServicesPU" src="Images/Media/Deezer.png"/></a>
+                <a href="https://www.tidal.com/browse/artist/7785830"><img class="streamingServicesPU" src="Images/Media/Tidal.png"/></a>
+                <p>
+                    <a href="https://distrokid.com/hyperfollow/dotzd/punta-cometa"> Pre-save Link</a>
+                </p>
+                <div id="getOutPop" onclick="document.getElementById('popUp').style.display = 'none'">X</div>
+            </div>
+            
+        </div>
     </body>
 </html>
