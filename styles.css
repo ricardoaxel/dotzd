@@ -151,11 +151,11 @@ nav {
 #menu2
 { 
   position: absolute;
-  width: 180px;
+  width: 40%;
   height: 100vh;
   box-shadow: 0 0 10px #85888C;
   margin: -50px 0 0 -50px;
-  padding: 50px;
+  padding: 4rem;
   padding-top: 125px;
   background-color: #f5f6faf1;
   -webkit-font-smoothing: antialiased;
@@ -198,6 +198,10 @@ ul {
         right:  2rem;
     }
 }
+
+/*background classes*/
+
+
 
 
 
@@ -439,6 +443,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     text-align: justify;
     padding-right: 2rem;
     padding-left: 0rem;  
+    z-index:1;
 }
 #arrowsMusic{
     font-size: 20rem;
@@ -451,7 +456,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     height: 80px;
     border-radius: 60px;
 }
-.arrowMContainer:hover{
+.arrowMContainer:active{
     background-color: rgba(255, 255, 255, 0.884);
 }
 .arrowM{
@@ -464,7 +469,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     text-align: center;
     transition: 1s;
 }
-.arrowM:hover{
+.arrowM:active{
     color: rgb(0, 0, 0);
 }
 #arrowLeftM{
@@ -477,6 +482,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 #musicArrows{
  position: sticky;
  top:50%;
+ z-index: 2;
 
 }
 #fullArrLeft{
