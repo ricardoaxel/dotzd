@@ -28,7 +28,6 @@
                 fetch("https://api.countapi.xyz/update/dotzdProduction/counter/?amount=1")
                 .then(res => res.json())
                 .then(res => {
-                    console.log("asdas",res.value);
                     document.getElementById("visitorsCount").innerHTML = res.value;
                 });
             }
