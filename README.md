@@ -6,7 +6,8 @@ Online PressKit for the Music group called "Dotzd"
 - Pure HTML, CSS % JS.
 - Fully responsive.
 - Flexbox.
-- Sliders for Photos and Music exposure
+- Language selection.
+- Sliders for Photos and Music exposure.
 
 ### Technologies & Tools
 - 🌐Frontend: 
