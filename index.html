@@ -16,9 +16,11 @@
             window.onload = function() {
                 //changeLanguage("ENG");
                 updateVisitCount();
-                setTimeout(function(){ 
+                //Pop-UP
+                /*setTimeout(function(){ 
                     document.getElementById('popUp').style.display = 'block'; 
                 }, 10000);
+                */
             };
 
 
@@ -85,7 +87,7 @@
                                         </p>
                                         <p>La música de Dotzd busca llevar al escucha a lugares de ensueño y fantasía a través de guitarras llenas de efectos, distorsión y con una gran cantidad de capas creando así un inmenso paisaje sonoro.
                                         </p>
-                                        <p>"Tempo" será el primer LP con próximo lanzamiento a finales de Noviembre del 2020, teniendo como sencillo la canción <a href="https://distrokid.com/hyperfollow/dotzd/punta-cometa" target="_blank">Punta Cometa".</a>
+                                        <p>"Tempo" es el más reciente álbum del proyecto, con fecha de lanzamiento para el 04 de Diciembre del 2020.</a>
                                         </p>
                                         <br>
                                         <h3>Canciones recomendadas</h3>
@@ -105,7 +107,7 @@
                                         Después un año de presentaciones, la banda volvería a pasar a ser un proyecto en solitario y así Ashel comenzaría a trabajar en la tercera producción que lleva por nombre "Fantasia"(2018), esta cuenta con elementos parecidos a sus producciones pasadas pero llevando el sonido a canciones más tranquilas e introspectivas, añadiendo sintetizadores  y elementos del Shoegaze y Math Rock.
                                     </p>
                                     <p>
-                                        La última producción del proyecto lleva por nombre "Tempo", con fecha de lanzamiento a finales de Noviembre del 2020. Esta busca mostrar una recopilación de todos los elementos sonoros que han influido en la banda mostrándolos así un sonido más consolidado y propio, además de añadir nuevos elementos como lo son la Psicodelia y tintes de Slowcore, para dar como resultado un disco lleno de diferentes texturas.
+                                        La última producción del proyecto lleva por nombre "Tempo", con estreno el 04 de Diciembre del 2020. Esta busca mostrar una recopilación de todos los elementos sonoros que han influido en la banda mostrándolos así un sonido más consolidado y propio, además de añadir nuevos elementos como lo son la Psicodelia y tintes de Slowcore, para dar como resultado un disco lleno de diferentes texturas.
                                     </p>
                                     <p>
                                         Toda la música creada por Dotzd ha sido producida en su totalidad por Ashel, desde el proceso de grabación, mezcla y master, hasta la producción de portadas y difusión del proyecto, haciendo de este una muestra clara de su crecimiento como músico y productor. La música de Dotzd es un reflejo de las etapas y cambios en la vida de su creador.
@@ -114,18 +116,7 @@
                                     <p> Lantlôs, Deafheaven, Rolo Tomassi, This Will Destroy You, Alcest, Anathema, Mogwai.
                                     </p>
                                    `;
-                                    //MUSIC
-                                    document.getElementById("albumDescription").innerHTML = `
-                                    <p>
-                                            Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
-                                        </p>
-                                        <p>
-                                            Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
-                                        </p>
-                                        <p>
-                                            Inspiración para este disco: Lantlôs, Loscil, Rolo Tomassi.
-                                        </p>
-                                    `;
+                                    
                                     document.getElementById("mainContact").innerHTML = `
                                     <h1>Contacto</h1>
                                     <p>
@@ -205,7 +196,7 @@
                                         After a year of presentations, the band become again a solo project and thus, Ashel begin to work on the third production called "Fantasia" (2018), this has elements similar to their previous works but carrying the sound to quieter and more instropective songs by adding synths and elements of Shoegaze and Math Rock.
                                     </p>
                                     <p>
-                                        The latest production of the project is called "Tempo", with a launch date on November 2020. This release seeks to show a compilation of all the sound elements that have influenced the band and showing them in a more consolidated and particular sound, in addition to add new elements such as Psychedelia and Slowcore, to result into a new sound full of different textures.
+                                        The latest production of the project is called "Tempo", with a launch date on December 04 2020. This release seeks to show a compilation of all the sound elements that have influenced the band and showing them in a more consolidated and particular sound, in addition to add new elements such as Psychedelia and Slowcore, to result into a new sound full of different textures.
                                     </p>
                                     <p>
                                         All the music created by Dotzd has been produced entirely by Ashel, from the recording, mixing and mastering process, to the production of art covers and difusion of the project, making this a clear example of his growth as a musician and producer. Dotzd's music is a reflection of the phases and changes in the life of its creator.
@@ -224,24 +215,12 @@
                                             Dotzd's music takes the listener to dreamy and fantasy places through guitars full of effects, distortion and a lot of sound layers, thus creating an immense soundscape.
                                         </p>
                                         <p>
-                                            "Tempo" will be the first LP with a next release on November 2020, with the song <a href="https://distrokid.com/hyperfollow/dotzd/punta-cometa" target="_blank">"Punta Cometa"</a> as a single.
+                                            "Tempo" is the most recent album, to be released on December 04.
                                         </p>
                                         <h3>Featured Tracks:</h3>
                                     `;
-                                    //MUSIC
-                                    document.getElementById("albumDescription").innerHTML = `
-                                    <p>
-                                        This EP was born after the end of the live performances of "Soñar". In this release new sounds are explored with the inclusion of synthesizers and more ambient sounds.
-                                    </p>
-                                    <p>
-                                        A cleaner structure is shown in the songs, resulting into a more thoughtful and personal set of themes than previous productions.
-                                    </p>
-                                    <p>
-                                        Inspiration for this album: Lantlôs, Loscil, Rolo Tomassi.
-                                    </p>
-
-                                    `;
-                                    document.getElementById("recomendedSongs").innerHTML = `Recommended Tracks`;
+                                
+                                    document.getElementById("recomendedSongs").innerHTML = `Featured Tracks`;
                                     document.getElementById("description-text-musicp2").innerHTML = `
                                     <div id="title-music-descriptionp2"><h3>Credits</h3></div>
                                     <div id="credits">
@@ -299,11 +278,29 @@
                                     case 0:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
-                                            Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
+                                    Post-Rock, Shoegaze, Post-Metal, Blackgaze, Sludge, Slowcore, Ambient, Psicodelia y un toque de Noise dan como resultado a Tempo, un disco que si bien no está centrado en un sólo género, toma elementos de todos estos para lograr diferentes texturas en sus canciones, mostrando así, un álbum lleno cambios llevados de la mano entre melancolía, tranquilidad, caos, alegría y tristeza. 
                                         </p>
+                                        <p>
+                                            “Tempo” es una analogía al paso del tiempo, este relaciona el camino del Alba al Ocaso con los cambios en la vida misma, un sube y baja de emociones.   
+                                        </p>
+                                        <p>
+                                            Inspiración para este disco: Lantlos, Whirr, Pelican, Year of No Light, Codeine, Invisible, Yasushi Yoshida
+                                        </p>  
+                                        `;
+                                        document.getElementById("credits").innerHTML = `
+                                        <p>
+                                        Guitarras, bajo, voz, sintetizadores, programación de batería, portada, mezcla y masterización - Ashel<br><br>
+                                        Grabado en el estudio propio "Echo Bravo"
+                                        </p>
+                                        `;
+
+                                    break;
+                                    case 1:
+                                        document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
                                         </p>
+                                        
                                         <p>
                                             Inspiración para este disco: Lantlôs, Loscil, Rolo Tomassi.
                                         </p>
@@ -316,7 +313,7 @@
                                         `;
 
                                     break;
-                                    case 1:
+                                    case 2:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             Bajo un sonido más definido que su antecesor ("Reveries" 2014), "Soñar" muestra la evolución de Dotzd a dos ramas principales, el "Post-Rock" y el "Blackgaze" 
@@ -338,7 +335,7 @@
                                         </p>
                                         `;
                                     break;
-                                    case 2:
+                                    case 3:
                                     document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             Con un sonido crudo y amateur, tanto en producción como en composición, "Reveries" es una recopilación de las primeras grabaciones realizadas desde el año 2012 hasta el 2014, teniendo en su catálogo canciones con un sonido al más puro del Black Metal con la inclusión de elementos básicos de Post Rock.
@@ -361,6 +358,26 @@
                                     case 0:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
+                                            Post-Rock, Shoegaze, Post-Metal, Blackgaze, Sludge, Slowcore, Ambient, Psicodelia and Noise result in “Tempo”. An album that, even if it is not focused on a single genre, takes elements from all of these to achieve different textures in its songs, thus showing an album full of changes between melancholy, tranquility, chaos and sadness.
+                                        </p>
+                                        <p>
+                                            “Tempo” is an analogy to the passage of time, going from Dawn to Sunset, like life itself. A rise and fall of emotions.
+                                        </p>
+                                        <p>
+                                            Inspiration for this album: Mogwai, Deafheaven, Russian Circles.
+                                        </p>
+                                        `;
+                                        document.getElementById("credits").innerHTML = `
+                                        <p>
+                                        Guitar, bass, voice, synths, drum programming, cover, mix and master - Ashel<br><br>
+                                        Recorded at his own Home Studio "Echo Bravo"
+                                        </p>
+                                        `;
+
+                                    break;
+                                    case 1:
+                                        document.getElementById("albumDescription").innerHTML = `
+                                        <p>
                                             This EP was born after the end of the live performances of "Soñar". In this release new sounds are explored with the inclusion of synthesizers and more ambient sounds.
                                         </p>
                                         <p>
@@ -378,7 +395,7 @@
                                         `;
 
                                     break;
-                                    case 1:
+                                    case 2:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             Under a more defined sound than its predecessor ("Reveries" 2014), "Soñar" shows the evolution of Dotzd into two main genres branches known as "Post-Rock" and "Blackgaze".    
@@ -400,7 +417,7 @@
                                         </p>
                                         `;
                                     break;
-                                    case 2:
+                                    case 3:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             With a raw and amateur sound, both in production and composition, "Reveries" is a compilation of the first recordings made between 2012 and 2014, having in its catalog songs with sounds similar to the purest Black Metal but also with the inclusion of some basic elements of Post Rock.
@@ -435,11 +452,12 @@
                             <p>La música de Dotzd busca llevar al escucha a lugares de ensueño y fantasía a través de guitarras llenas de efectos, distorsión y con una gran cantidad de capas, creando así un inmenso paisaje sonoro.
                             </p>
                             <p>
-                            "Tempo" será el primer LP con próximo lanzamiento a finales de Noviembre del 2020, teniendo como sencillo la canción <a href="https://distrokid.com/hyperfollow/dotzd/punta-cometa" target="_blank">Punta Cometa".</a>
+                            "Tempo" es el más reciente álbum del proyecto, con fecha de lanzamiento para el 04 de Diciembre del 2020.</a>
                             </p>
                             <br>
                             <h3>Canciones recomendadas</h3>
                         </div>
+                        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1711198430/size=small/bgcol=333333/linkcol=ffffff/track=2381838282/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/tempo">Tempo by Dotzd</a></iframe>
                         <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
                         <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=22841879/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/so-ar">Soñar by Dotzd</a></iframe>
                     </div>
@@ -506,7 +524,7 @@
                                 Después un año de presentaciones, la banda volvería a pasar a ser un proyecto en solitario y así Ashel comenzaría a trabajar en la tercera producción que lleva por nombre "Fantasia"(2018), esta cuenta con elementos parecidos a sus producciones pasadas pero llevando el sonido a canciones más tranquilas e introspectivas, añadiendo sintetizadores  y elementos del Shoegaze y Math Rock.
                             </p>
                             <p>
-                                La última producción del proyecto lleva por nombre "Tempo", con fecha de lanzamiento a finales de Noviembre del 2020. Esta busca mostrar una recopilación de todos los elementos sonoros que han influido en la banda mostrándolos así un sonido más consolidado y propio, además de añadir nuevos elementos como lo son la Psicodelia y tintes de Slowcore, para dar como resultado un disco lleno de diferentes texturas.
+                                La última producción del proyecto lleva por nombre "Tempo", con estreno el 04 de Diciembre del 2020. Esta busca mostrar una recopilación de todos los elementos sonoros que han influido en la banda mostrándolos así un sonido más consolidado y propio, además de añadir nuevos elementos como lo son la Psicodelia y tintes de Slowcore, para dar como resultado un disco lleno de diferentes texturas.
                             </p>
                             <p>
                                 Toda la música creada por Dotzd ha sido producida en su totalidad por Ashel, desde el proceso de grabación, mezcla y master, hasta la producción de portadas y difusión del proyecto, haciendo de este una muestra clara de su crecimiento como músico y productor. La música de Dotzd es un reflejo de las etapas y cambios en la vida de su creador.
@@ -527,44 +545,45 @@
                 
                 <div id="flexcontainermusic">
                     <div id="main-text-music" class="separation">
-                        <div id="albumtitle"><h1 id="albumtitletext">Fantasia <h2>(2018)</h2></h1></div>
+                        <div id="albumtitle"><h1 id="albumtitletext">Tempo <h2>(2020)</h2></h1></div>
                         <div id="albumDescription">
                             <p>
-                                Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
+                                Post-Rock, Shoegaze, Post-Metal, Blackgaze, Sludge, Slowcore, Ambient, Psicodelia y un toque de Noise dan como resultado a Tempo, un disco que si bien no está centrado en un sólo género, toma elementos de todos estos para lograr diferentes texturas en sus canciones, mostrando así, un álbum lleno cambios llevados de la mano entre melancolía, tranquilidad, caos, alegría y tristeza. 
                             </p>
                             <p>
-                                Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
+                                “Tempo” es una analogía al paso del tiempo, este relaciona el camino del Alba al Ocaso con los cambios en la vida misma, un sube y baja de emociones.   
                             </p>
                             <p>
-                                Inspiración para este disco: Lantlôs, Loscil, Rolo Tomassi.
+                                Inspiración para este disco: Lantlos, Whirr, Pelican, Year of No Light, Codeine, Invisible, Yasushi Yoshida
                             </p>   
                         </div>
                         <br>
                         <h3 id="recomendedSongs">Canciones recomendadas</h3>
                         <div id="featuredTracks">
-                            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
-                            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
+                            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1711198430/size=small/bgcol=333333/linkcol=ffffff/track=2381838282/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/tempo">Tempo by Dotzd</a></iframe>    
                         </div>
                     </div>
                     <div id="bcPlayer"class="separation">
-                        <iframe id="bandcampProperties" src="https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=large/bgcol=333333/linkcol=ffffff/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/fantasia">Fantasia by Dotzd</a></iframe>
+                        <iframe id="bandcampProperties" src="https://bandcamp.com/EmbeddedPlayer/album=1711198430/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/tempo">Tempo by Dotzd</a></iframe>
                     </div>
                     <div id="description" class="separation">
                         <div id="description-text-music">
                             <div id="title-music-description"><h2>Tracklist</h2></div>
                             <ol id="albumtracks">
-                                <li>Nonawa</li>
-                                <li>Wonder</li>
-                                <li>Sune</li>
-                                <li>Catnip</li>
-                                <li>Copo</li>
-                                <li>Palpitar</li>
+                                <li>Alba</li>
+                                <li>Destello</li>
+                                <li>Punta Cometa</li>
+                                <li>Capicua</li>
+                                <li>Los Anhelos</li>
+                                <li>Febrero 2028 - Ocaso</li>
+                                <li>Plétora</li>
+                                <li>Suspiro</li>
                             </ol>
                         </div>
                         <div id="description-text-musicp2" class="separation">
                             <div id="title-music-descriptionp2"><h3>Créditos</h3></div>
                             <div id="credits">
-                                Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización - Ashel<br><br>
+                                Guitarras, bajo, voz, sintetizadores, programación de batería, portada, mezcla y masterización - Ashel<br><br>
                                 Grabado en el estudio propio "Echo Bravo"
                             </div>                          
                             
@@ -580,15 +599,37 @@
                         albumposition=albumposition+direction;
                         //If the album position gets to the first element
                         if(albumposition<0){
-                            albumposition=2;
+                            albumposition=3;
                         }
                         //If the album position gets to the last element
-                        if(albumposition>2){
+                        if(albumposition>3){
                             albumposition=0;
                         }
 
                         switch(albumposition){
                                 case 0:
+                                    document.getElementById("music").style.backgroundImage = "url('Images/Covers/COVER.png')";
+                                    document.getElementById("albumtitle").innerHTML = `
+                                        <h1 id="albumtitletext">Tempo <h2>(2020)</h2></h1>
+                                        `;
+                                    document.getElementById("featuredTracks").innerHTML = `
+                                        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1711198430/size=small/bgcol=333333/linkcol=ffffff/track=2381838282/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/tempo">Tempo by Dotzd</a></iframe>    
+                                        `;
+                                    document.getElementById("bcPlayer").innerHTML = `
+                                        <iframe id="bandcampProperties" src="https://bandcamp.com/EmbeddedPlayer/album=1711198430/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=true/" seamless><a href="https://dotzd.bandcamp.com/album/tempo">Tempo by Dotzd</a></iframe>
+                                        `;
+                                    document.getElementById("albumtracks").innerHTML = `
+                                        <li>Alba</li>
+                                        <li>Destello</li>
+                                        <li>Punta Cometa</li>
+                                        <li>Capicua</li>
+                                        <li>Los Anhelos</li>
+                                        <li>Febrero 2028 - Ocaso</li>
+                                        <li>Plétora</li>
+                                        <li>Suspiro</li>
+                                        `;
+                                break;
+                                case 1:
                                     document.getElementById("music").style.backgroundImage = "url('Images/Covers/Fantasia.jpg')";
                                     document.getElementById("albumtitle").innerHTML = "<h1 id='albumtitletext'>Fantasia <h2>(2018)</h2></h1>";
                                     document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=1517996353/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=3427377961/size=small/bgcol=333333/linkcol=ffffff/track=3450316988/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/fantasia'>Fantasia by Dotzd</a></iframe>";
@@ -596,20 +637,21 @@
                                     document.getElementById("albumtracks").innerHTML = "<li>Nonawa</li><li>Wonder</li><li>Sune</li><li>Catnip</li><li>Copo</li><li>Palpitar</li>";
 
                                 break;
-                                case 1:
+                                case 2:
                                     document.getElementById("music").style.backgroundImage = "url('Images/Covers/Sonar.jpg')";
                                     document.getElementById("albumtitle").innerHTML = "<h1 id='albumtitletext'>Soñar <h2>(2016)</h2></h1>";
                                     document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=22841879/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe><iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=small/bgcol=333333/linkcol=ffffff/track=3649371717/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
                                     document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=784210837/size=large/bgcol=333333/linkcol=ffffff/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/so-ar'>Soñar by Dotzd</a></iframe>";
                                     document.getElementById("albumtracks").innerHTML = "<li>...</li><li>Soñar</li><li>Sinestesia</li><li>Interludio</li><li>Lala</li> <li>Frost</li>";
                                 break;
-                                case 2:
+                                case 3:
                                     document.getElementById("music").style.backgroundImage = "url('Images/Covers/Reveries.jpg')";
                                     document.getElementById("albumtitle").innerHTML = "<h1 id='albumtitletext'>Reveries<h2>(2014)</h2></h1>";
                                     document.getElementById("featuredTracks").innerHTML = "<iframe style='border: 0; width: 100%; height: 42px;' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=small/bgcol=333333/linkcol=ffffff/track=657903695/transparent=true/' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
                                     document.getElementById("bcPlayer").innerHTML = "<iframe id='bandcampProperties' src='https://bandcamp.com/EmbeddedPlayer/album=2859234241/size=large/bgcol=333333/linkcol=ffffff/transparent=true/'' seamless><a href='https://dotzd.bandcamp.com/album/reveries'>Reveries by Dotzd</a></iframe>";
                                     document.getElementById("albumtracks").innerHTML = "<li>Volar</li><li>Dive</li><li>Narwhals</li><li>Routinary Nights</li><li>Shine</li> <li>Finale - Ashes</li>";
                                 break;
+                                
                             }
                         //************We are aware of the site language to change that particular slice in the selected languaje*******************
                         if(language==="ESP"){
@@ -617,8 +659,25 @@
                                 case 0:
                                     document.getElementById("albumDescription").innerHTML = `
                                     <p>
-                                        Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
+                                Post-Rock, Shoegaze, Post-Metal, Blackgaze, Sludge, Slowcore, Ambient, Psicodelia y un toque de Noise dan como resultado a Tempo, un disco que si bien no está centrado en un sólo género, toma elementos de todos estos para lograr diferentes texturas en sus canciones, mostrando así, un álbum lleno cambios llevados de la mano entre melancolía, tranquilidad, caos, alegría y tristeza. 
                                     </p>
+                                    <p>
+                                        “Tempo” es una analogía al paso del tiempo, este relaciona el camino del Alba al Ocaso con los cambios en la vida misma, un sube y baja de emociones.   
+                                    </p>
+                                    <p>
+                                        Inspiración para este disco: Lantlos, Whirr, Pelican, Year of No Light, Codeine, Invisible, Yasushi Yoshida
+                                    </p>  
+                                    `;
+                                    document.getElementById("credits").innerHTML = `
+                                    <p>
+                                    Guitarras, bajo, sintetizadores, programación de batería, portada, mezcla y masterización - Ashel<br><br>
+                                    Grabado en el estudio propio "Echo Bravo"
+                                    </p>
+                                    `;
+
+                                break;
+                                case 1:
+                                    document.getElementById("albumDescription").innerHTML = `
                                     <p>
                                         Este EP nace tras la finalización de las presentaciones en vivo de "Soñar". En este disco se exploran  nuevos sonidos con la inclusión de sintetizador y sonidos más ambientales.
                                     </p>
@@ -634,7 +693,7 @@
                                     `;
 
                                 break;
-                                case 1:
+                                case 2:
                                     document.getElementById("albumDescription").innerHTML = `
                                     <p>
                                         Bajo un sonido más definido que su antecesor ("Reveries" 2014), "Soñar" muestra la evolución de Dotzd a dos ramas principales, el "Post-Rock" y el "Blackgaze" 
@@ -656,7 +715,7 @@
                                     </p>
                                     `;
                                 break;
-                                case 2:
+                                case 3:
                                 document.getElementById("albumDescription").innerHTML = `
                                     <p>
                                         Con un sonido crudo y amateur, tanto en producción como en composición, "Reveries" es una recopilación de las primeras grabaciones realizadas desde el año 2012 hasta el 2014, teniendo en su catálogo canciones con un sonido al más puro del Black Metal con la inclusión de elementos básicos de Post Rock.
@@ -679,6 +738,26 @@
                                     case 0:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
+                                            Post-Rock, Shoegaze, Post-Metal, Blackgaze, Sludge, Slowcore, Ambient, Psicodelia and Noise result in “Tempo”. An album that, even if it is not focused on a single genre, takes elements from all of these to achieve different textures in its songs, thus showing an album full of changes between melancholy, tranquility, chaos and sadness.
+                                        </p>
+                                        <p>
+                                            “Tempo” is an analogy to the passage of time, going from Dawn to Sunset, like life itself. A rise and fall of emotions.
+                                        </p>
+                                        <p>
+                                            Inspiration for this album: Mogwai, Deafheaven, Russian Circles.
+                                        </p>
+                                        `;
+                                        document.getElementById("credits").innerHTML = `
+                                        <p>
+                                        Guitar, bass, voice, synths, drum programming, cover, mix and master - Ashel<br><br>
+                                        Recorded at his own Home Studio "Echo Bravo"
+                                        </p>
+                                        `;
+
+                                    break;
+                                    case 1:
+                                        document.getElementById("albumDescription").innerHTML = `
+                                        <p>
                                             This EP was born after the end of the live performances of "Soñar". In this release new sounds are explored with the inclusion of synthesizers and more ambient sounds.
                                         </p>
                                         <p>
@@ -696,7 +775,7 @@
                                         `;
 
                                     break;
-                                    case 1:
+                                    case 2:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             Under a more defined sound than its predecessor ("Reveries" 2014), "Soñar" shows the evolution of Dotzd into two main genres branches known as "Post-Rock" and "Blackgaze".    
@@ -718,7 +797,7 @@
                                         </p>
                                         `;
                                     break;
-                                    case 2:
+                                    case 3:
                                         document.getElementById("albumDescription").innerHTML = `
                                         <p>
                                             With a raw and amateur sound, both in production and composition, "Reveries" is a compilation of the first recordings made between 2012 and 2014, having in its catalog songs with sounds similar to the purest Black Metal but also with the inclusion of some basic elements of Post Rock.

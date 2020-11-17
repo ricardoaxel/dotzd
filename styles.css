@@ -399,7 +399,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 /* MUSIC */
 
 #music{
-    background-image: url("Images/Covers/Fantasia.jpg");
+    background-color: black;
+    background-image: url("Images/Covers/COVER.png");
     transition: 1s;
 }
 #flexcontainermusic{
