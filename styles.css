@@ -763,6 +763,8 @@ button:hover {
     #contactFormArea{
         padding-left: 1rem;
         padding-right: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     #socialMedia{
         padding-top: 1rem;
@@ -815,7 +817,7 @@ button:hover {
     left:0px;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 7, 7, 0.466);
+    background-color: rgba(218, 240, 24, 0.897);
     text-align: center;
     transition: .5s;
     display: none;
