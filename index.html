@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
             window.onload = function() {
-                changeLanguage("ENG");
                 updateVisitCount();
+                changeLanguage("ENG");
                 //Pop-UP
                 /*setTimeout(function(){ 
                     document.getElementById('popUp').style.display = 'block'; 
@@ -31,6 +31,7 @@
                 fetch("https://api.countapi.xyz/update/dotzdProduction/counter/?amount=1")
                 .then(res => res.json())
                 .then(res => {
+                    console.log("hola",res);
                     document.getElementById("visitorsCount").innerHTML = res.value;
                 });
             }
@@ -863,7 +864,6 @@
                             <h1>Escucha a Dotzd en:</h1>
                         </div>
                         <a href="https://open.spotify.com/artist/79GsZllo3AdguIaHUh1u3l" target="_blank"><img class="streamingServices" src="Images/Media/Spotify.png"/></a>
-                        <a href="https://music.apple.com/us/artist/dotzd/1108541884" target="_blank"><img class="streamingServices" src="Images/Media/appleMusic.png"/></a>
                         <a href="https://music.youtube.com/browse/UCAnzGtjOQmKWU2KJDx6IGJg" target="_blank"><img class="streamingServices" src="Images/Media/GoogleMusic.png"/><br></a>
                         <a href="https://dotzd.bandcamp.com/" target="_blank"><img class="streamingServices" src="Images/Media/Bandcamp.png"/></a>
                         <a href="https://www.deezer.com/mx/artist/10268706" target="_blank"><img class="streamingServices" src="Images/Media/Deezer.png"/></a>
